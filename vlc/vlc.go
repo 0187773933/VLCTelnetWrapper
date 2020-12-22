@@ -4,6 +4,6 @@ import (
 	"fmt"
 )
 
-func main() {
+func Here() {
 	fmt.Println( "vlc here" )
 }
