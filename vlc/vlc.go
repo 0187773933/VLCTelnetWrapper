@@ -104,3 +104,150 @@ func ( vlc *Wrapper ) GetTime() ( result string )  {
 	result = vlc.ReadResult()
 	return
 }
+
+func ( vlc *Wrapper ) GetLength() ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( "get_length\n" ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) Stats() ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( "stats\n" ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) FullscreenOn() ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( "fullscreen on\n" ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) FullscreenOff() ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( "fullscreen off\n" ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) VolumeGet() ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( "volume\n" ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) VolumeSet( volume_level string ) ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( fmt.Sprintf( "volume %s\n" , volume_level ) ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) VolumeUp( number_of_steps int ) ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( fmt.Sprintf( "volup %d\n" , number_of_steps ) ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) VolumeDown( number_of_steps int ) ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( fmt.Sprintf( "volup %d\n" , number_of_steps ) ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) Add( file_path string ) ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( fmt.Sprintf( "add %s\n" , file_path ) ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) Enqueue( file_path string ) ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( fmt.Sprintf( "enqueue %s\n" , file_path ) ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) Seek( seconds int64 ) ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( fmt.Sprintf( "seek %d\n" , seconds ) ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) Play() ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( "play" ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) Pause() ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( "pause" ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) Stop() ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( "stop" ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) Rewind() ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( "rewind" ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) Next() ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( "next" ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) Previous() ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( "previous" ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) Clear() ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( "clear" ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) Loop() ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( "loop" ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) Repeat() ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( "repeat" ) )
+	result = vlc.ReadResult()
+	return
+}
+
+func ( vlc *Wrapper ) Random() ( result string )  {
+	result = "failed"
+	vlc.Telnet.Write( []byte( "random" ) )
+	result = vlc.ReadResult()
+	return
+}
