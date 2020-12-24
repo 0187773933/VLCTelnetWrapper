@@ -184,70 +184,70 @@ func ( vlc *Wrapper ) Seek( seconds int64 ) ( result string )  {
 
 func ( vlc *Wrapper ) Play() ( result string )  {
 	result = "failed"
-	vlc.Telnet.Write( []byte( "play" ) )
+	vlc.Telnet.Write( []byte( "play\n" ) )
 	result = vlc.ReadResult()
 	return
 }
 
 func ( vlc *Wrapper ) Pause() ( result string )  {
 	result = "failed"
-	vlc.Telnet.Write( []byte( "pause" ) )
+	vlc.Telnet.Write( []byte( "pause\n" ) )
 	result = vlc.ReadResult()
 	return
 }
 
 func ( vlc *Wrapper ) Stop() ( result string )  {
 	result = "failed"
-	vlc.Telnet.Write( []byte( "stop" ) )
+	vlc.Telnet.Write( []byte( "stop\n" ) )
 	result = vlc.ReadResult()
 	return
 }
 
 func ( vlc *Wrapper ) Rewind() ( result string )  {
 	result = "failed"
-	vlc.Telnet.Write( []byte( "rewind" ) )
+	vlc.Telnet.Write( []byte( "rewind\n" ) )
 	result = vlc.ReadResult()
 	return
 }
 
 func ( vlc *Wrapper ) Next() ( result string )  {
 	result = "failed"
-	vlc.Telnet.Write( []byte( "next" ) )
+	vlc.Telnet.Write( []byte( "next\n" ) )
 	result = vlc.ReadResult()
 	return
 }
 
 func ( vlc *Wrapper ) Previous() ( result string )  {
 	result = "failed"
-	vlc.Telnet.Write( []byte( "previous" ) )
+	vlc.Telnet.Write( []byte( "previous\n" ) )
 	result = vlc.ReadResult()
 	return
 }
 
 func ( vlc *Wrapper ) Clear() ( result string )  {
 	result = "failed"
-	vlc.Telnet.Write( []byte( "clear" ) )
+	vlc.Telnet.Write( []byte( "clear\n" ) )
 	result = vlc.ReadResult()
 	return
 }
 
 func ( vlc *Wrapper ) Loop() ( result string )  {
 	result = "failed"
-	vlc.Telnet.Write( []byte( "loop" ) )
+	vlc.Telnet.Write( []byte( "loop\n" ) )
 	result = vlc.ReadResult()
 	return
 }
 
 func ( vlc *Wrapper ) Repeat() ( result string )  {
 	result = "failed"
-	vlc.Telnet.Write( []byte( "repeat" ) )
+	vlc.Telnet.Write( []byte( "repeat\n" ) )
 	result = vlc.ReadResult()
 	return
 }
 
 func ( vlc *Wrapper ) Random() ( result string )  {
 	result = "failed"
-	vlc.Telnet.Write( []byte( "random" ) )
+	vlc.Telnet.Write( []byte( "random\n" ) )
 	result = vlc.ReadResult()
 	return
 }
